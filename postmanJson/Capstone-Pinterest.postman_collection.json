@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "31f0605e-93ca-4a87-997e-41930535d0c9",
+		"name": "Capstone-Pinterest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23041751"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ayaka@hoyoverse.com\",\r\n    \"mat_khau\": \"AyakaOfKamisato#2809\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "{{domain}}/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ho_ten\": \"Koyomi Araragi\",\r\n    \"email\": \"koyomiararagi@gmail.com\",\r\n    \"tuoi\": 16,\r\n    \"mat_khau\": \"KoyomiBook@1209\",\r\n    \"anh_dai_dien\": \"https://i.imgur.com/r3SBcv5.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "All Images",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"url": "{{domain}}/images"
+			},
+			"response": []
+		},
+		{
+			"name": "Image  by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"url": "{{domain}}/images/9"
+			},
+			"response": []
+		},
+		{
+			"name": "Comment by Image ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"url": "{{domain}}/comments/image/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Search Image by Name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"url": "{{domain}}/images/search/pi"
+			},
+			"response": []
+		},
+		{
+			"name": "Is Image Saved",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"url": "{{domain}}/images/is-saved/2/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Post Comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ngay_binh_luan\": \"2022-12-11T06:27:51.044Z\",\r\n    \"noi_dung\": \"It's time to act, let's go\",\r\n    \"hinh_id\": 2,\r\n    \"nguoi_dung_id\": 7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/comments/post"
+			},
+			"response": []
+		},
+		{
+			"name": "All Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"url": "{{domain}}/users"
+			},
+			"response": []
+		},
+		{
+			"name": "User by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"url": "{{domain}}/users/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Images created by User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"url": "{{domain}}/users/3/images"
+			},
+			"response": []
+		},
+		{
+			"name": "Images saved by User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/users/2/saved-images",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"users",
+						"2",
+						"saved-images"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Image",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"url": "{{domain}}/images/delete/10"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "createdImage",
+							"type": "file",
+							"src": "/C:/Users/khuct/Pictures/Blue_Archive/Blue_Archive_08.jpg"
+						}
+					]
+				},
+				"url": "{{domain}}/images/upload/"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ten_hinh\": \"So High!\",\r\n  \"duong_dan\": \"https://www.worldatlas.com/r/w1200/upload/c5/de/3c/shutterstock-598924397.jpg\",\r\n  \"mo_ta\": \"At the peak of the mountain\",\r\n  \"nguoi_dung_id\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/images/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuZ3VvaV9kdW5nX2lkIjoxMSwiZW1haWwiOiJheWFrYUBob3lvdmVyc2UuY29tIiwibWF0X2toYXUiOiJBeWFrYW9mS2FtaXNhdG8iLCJob190ZW4iOiJLYW1pc2F0byBBeWFrYSIsInR1b2kiOjE2LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2Nkbi5zZm9ydW0udm4vc2ZvcnVtL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzA0LzExNTgwNDQucG5nIiwiaWF0IjoxNjcwOTQ4NjAzLCJleHAiOjE2NzM1NDA2MDN9.x6RexvLQ_O82lyQ24_6UB2eCvIhMnWixTCUTeIu2uJk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nguoi_dung_id\": 2,\r\n    \"ho_ten\": \"Angel\",\r\n    \"email\": \"angel@heaven.com\",\r\n    \"tuoi\": 1000,\r\n    \"mat_khau\": \"isAngel#Real3\",\r\n    \"anh_dai_dien\": \"https://pbs.twimg.com/media/E4K6Q7-WQAQxvXs.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/users/update"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080/api",
+			"type": "string"
+		}
+	]
+}
